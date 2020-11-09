@@ -1,0 +1,141 @@
+body {
+    background-color: #ffffff;
+    font-size: 18px;
+    margin: 0;
+    padding: 0;
+}
+
+h1{
+    text-align: center;
+}
+nav {
+    background-color: #f0ecec;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    border-bottom: 3px solid #50C7C7;
+}
+
+.nav-links {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    list-style: none;
+}
+
+nav a {
+    color: black;
+    font-weight: bold;
+    text-decoration: none;
+    justify-content: center; 
+}
+
+nav a:hover, nav:focus {
+    text-decoration: underline;
+    color: turquoise;
+    -webkit-text-decoration-style: dotted;
+    text-decoration-style: dotted;
+}
+.active-nav{
+    background-color: turquoise;
+}
+.active-nav:hover, .active-nav:focus{
+    text-decoration: underline;
+    color: purple;
+    -webkit-text-decoration-style: dotted;
+    text-decoration-style: dotted;
+}
+
+.skip a {
+    background: white;
+    left: 0;
+    padding: 6px;
+    -webkit-transition: top 1s ease-out;
+    transition: top 1s ease-out;
+    z-index: 1;
+    position: absolute;
+    top: -40px
+}
+.skip a:focus {
+    top: 0px;
+}
+.container {
+    display: grid;
+    grid-row-gap: 15px;
+    grid-template-columns: 1fr 5fr 1fr;
+    grid-template-rows: auto auto auto auto auto;
+}
+header {
+    background-attachment: fixed; /* Parallax effect */     
+    background-position: center;  /* Parallax effect */
+    background-repeat: no-repeat; /* Parallax effect */
+    background-size: cover;       /* Parallax effect */
+    color: white;
+    height: 400px;                /* Parallax effect */
+    background-image: url("../images/waterfall_header.jpg");
+  
+    grid-column: 1 / -1;
+    grid-row: 1 / auto;   
+}
+div img {
+    height: 500px;
+}
+
+.oregon, .utah, .northwest {
+    grid-column: 2 / span 1;
+}
+  
+.oregon-image, .utah-image, .northwest-image {
+    max-height: 700px;
+    grid-column: 1 / -1;
+    overflow: hidden;
+}
+  
+.oregon, .oregon-image {
+     grid-row: 2 / auto;
+}
+  
+.utah, .utah-image {
+     grid-row: 4 / auto;
+}
+  
+  
+.northwest, .northwest-image {
+      grid-row: 3 / auto;
+}
+
+  
+.text-block {
+  background-color: rgba(255, 255, 255, .8);
+  border: 10px solid black;
+  padding: 30px;
+  align-self: center;
+}
+
+@media (min-width: 850px) {
+   .nav-links {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: right;
+   }
+   nav a {
+    padding: 10px;
+   }
+   .container {
+    grid-template-columns: 50px auto 500px auto 50px;
+    grid-template-rows: 400px 400px 400px 400px 400px;
+   }
+
+  .oregon, .utah, .northwest-image{
+    grid-column: 3 / span 2;
+  }
+
+  .oregon-image, .utah-image, .northwest{
+    grid-column: 2 / span 2;
+  }
+  .northwest-image{
+    grid-column: 3 / span 2;
+}
+}
