@@ -29,7 +29,7 @@ nav {
 
 .nav-links {
     display: flex;
-    flex-direction: column;
+    flex-direction: stretch;
     justify-content: center;
     list-style: none;
 }
@@ -37,7 +37,8 @@ nav {
 nav a {
     color: black;
     text-decoration: none;
-    justify-content: center; 
+    justify-content: center;
+    padding: 10px; 
 }
 
 nav a:hover, nav:focus {
@@ -79,7 +80,7 @@ nav a:hover, nav:focus {
     grid-template-columns: 1fr 5fr 1fr;
     grid-template-rows: auto auto auto auto;
 }
-header {
+#main {
     background-attachment: fixed; /* Parallax effect */     
     background-position: center;  /* Parallax effect */
     background-repeat: no-repeat; /* Parallax effect */
@@ -92,16 +93,29 @@ header {
     grid-row: 1 / auto;   
 }
 .oregon-trip{
+    /* background-attachment: fixed; Parallax effect      */
+    background-position: center;  /* Parallax effect */
+    background-repeat: no-repeat; /* Parallax effect */
+    background-size: cover;       /* Parallax effect */
+    color: white;
+    height: 500px;                /* Parallax effect */
+    background-image: url("../images/oregon_pic10.jpg");
+    grid-column: 1 / -1;
+    grid-row: 1 / auto;   
+}
+
+.northwest-trip{
     background-attachment: fixed; /* Parallax effect */     
     background-position: center;  /* Parallax effect */
     background-repeat: no-repeat; /* Parallax effect */
     background-size: cover;       /* Parallax effect */
     color: white;
-    height: 400px;                /* Parallax effect */
-    background-image: url("../images/oregon_pic10.jpg");
+    height: 500px;                /* Parallax effect */
+    background-image: url("../images/northwest_header.jpg");
     grid-column: 1 / -1;
     grid-row: 1 / auto;   
 }
+
 .row {
     display: flex;
     flex-wrap: wrap;
@@ -112,25 +126,100 @@ header {
         box-sizing: border-box;
     }
 
-    .row.gtr-uniform > * > :last-child {
+    /* .row.gtr-uniform > * > :last-child {
         margin-bottom: 0;
-    }
+    } */
     .row {
         margin-top: 0;
         margin-left: -1em;
     }
+    .row > .col-6 {
+        width: 50%;
+    }
+    .row > .col-6-xsmall {
+        width: 50%;
+    }
+    .row > .col-12 {
+        width: 100%;
+    }
+    .row > .col-12-xsmall {
+        width: 100%;
+    }
 
-        .row > * {
-            padding: 0 0 0 1em;
+    .row > * {
+        padding: 0 0 0 1em;
+    }
+
+    .row.gtr-uniform {
+        margin-top: -1em;
+    }
+
+    .row.gtr-uniform > * {
+        padding-top: 1em;
+    }
+
+            
+
+
+.form-container {
+    margin: 50px auto;
+    max-width: calc(100% - 4.5em);
+    width: 45em;
+    border-top: 3px solid turquoise;
+}
+        
+/* .form-container.xsmall {
+    width: 11.25em;
+} */
+
+/* section.special, article.special {
+    text-align: center;
+} */
+
+header h3 + p {
+    font-size: 1.1em;
+    margin-top: -0.35em;
+    line-height: 1.5em;
+}
+form {
+    margin: 0 0 2.25em 0;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"] {
+    border-radius: 5px;
+    border: solid 2px #000000;
+    display: block;
+}
+
+textarea {
+    border-radius: 5px;
+    border: solid 2px #000000;
+    display: block;
+    width: 100%;
+}
+/* ul.actions {
+    margin: 0 0 2.25em 0;
+} */
+
+    ul.actions li {
+        display: block;
+        padding: 1.125em 0 0 0;
+        text-align: center;
+        width: 100%;
+    }
+
+        ul.actions li:first-child {
+            padding-top: 0;
         }
 
-        .row.gtr-uniform {
-            margin-top: -1em;
+        ul.actions li > * {
+            /* width: 100%; */
+            margin: 0 !important;
         }
 
-            .row.gtr-uniform > * {
-                padding-top: 1em;
-            }
+
 
 div img {
     height: 500px;
@@ -138,6 +227,9 @@ div img {
 .imagebox {
     max-width: 50%;
 }
+
+
+
 
 .oregon, .seattle, .northwest {
     grid-column: 2 / span 1;
@@ -170,21 +262,22 @@ div img {
   align-self: center;
 }
 footer {
-    margin: 0;
+    /* margin: 0;
     padding: 0;
     border: 0;
     font-size: 100%;
     font: inherit;
-    display: block;
+    display: block; */
+    background-color: #f0ecec;
+    border-top: 3px solid turquoise;
 }
-#wrapper.divided > * {
-    box-shadow: inset 0 1px 0 0 rgba(0, 0, 0, 0.075);
-}
+
 .align-center {
     text-align: center;
 }
-.wrapper.style1 > .inner {
-    padding: 3rem 2rem 1rem 2rem;
+
+.inner {
+    padding: 1rem 2rem 1rem 2rem;
 }
 ul {
     display: block;
@@ -196,8 +289,6 @@ ul {
     padding-inline-start: 40px;
 }
 ul.icons {
-    cursor: default;
-    list-style: none;
     padding-left: 0;
 }
 ul.icons li {
