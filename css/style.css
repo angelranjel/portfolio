@@ -80,7 +80,7 @@ nav a:hover, nav:focus {
     grid-template-columns: 1fr 5fr 1fr;
     grid-template-rows: auto auto auto auto;
 }
-header {
+#main {
     background-attachment: fixed; /* Parallax effect */     
     background-position: center;  /* Parallax effect */
     background-repeat: no-repeat; /* Parallax effect */
