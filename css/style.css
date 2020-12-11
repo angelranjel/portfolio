@@ -219,12 +219,10 @@ img:hover {
     opacity: 1;
 }
 .overlay {
-    /* position: absolute; */
     top: 0;
     bottom: 0;
     left: 0;
     right: 0;
-    /* height: 100%; */
     width: 100%;
     opacity: 0;
     transition: .5s ease;
@@ -249,6 +247,7 @@ img:hover {
 .seattle-image img{
     height: 500px;
     width: auto;
+    opacity: 1;
 }
 
 .oregon, .seattle, .northwest {
