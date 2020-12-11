@@ -122,13 +122,9 @@ nav a:hover, nav:focus {
     box-sizing: border-box;
     align-items: stretch;
 }
-     .row > * {
-        box-sizing: border-box;
-    }
-
-    /* .row.gtr-uniform > * > :last-child {
-        margin-bottom: 0;
-    } */
+.row > * {
+    box-sizing: border-box;
+}
     .row {
         margin-top: 0;
         margin-left: -1em;
@@ -167,14 +163,6 @@ nav a:hover, nav:focus {
     width: 45em;
     border-top: 3px solid turquoise;
 }
-        
-/* .form-container.xsmall {
-    width: 11.25em;
-} */
-
-/* section.special, article.special {
-    text-align: center;
-} */
 
 header h3 + p {
     font-size: 1.1em;
@@ -199,9 +187,7 @@ textarea {
     display: block;
     width: 100%;
 }
-/* ul.actions {
-    margin: 0 0 2.25em 0;
-} */
+
 
     ul.actions li {
         display: block;
@@ -215,21 +201,55 @@ textarea {
         }
 
         ul.actions li > * {
-            /* width: 100%; */
             margin: 0 !important;
         }
 
-
-
-div img {
+/* div img {
     height: 500px;
+} */
+
+img {
+    width: 100%;
+    height: auto;
+    opacity: .95;
 }
-.imagebox {
-    max-width: 50%;
+
+img:hover {
+    border: 1px solid #777;
+    opacity: 1;
 }
+.overlay {
+    /* position: absolute; */
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    /* height: 100%; */
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+  }
+  
+  .imagebox:hover .overlay {
+    opacity: 1;
+  }
+  
+  .text {
+    color: black;
+    font-size: 20px;
+    /* position: absolute; */
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+  }
 
-
-
+.oregon-image img,
+.northwest-image img,
+.seattle-image img{
+    height: 500px;
+    width: auto;
+}
 
 .oregon, .seattle, .northwest {
     grid-column: 2 / span 1;
@@ -262,12 +282,6 @@ div img {
   align-self: center;
 }
 footer {
-    /* margin: 0;
-    padding: 0;
-    border: 0;
-    font-size: 100%;
-    font: inherit;
-    display: block; */
     background-color: #f0ecec;
     border-top: 3px solid turquoise;
 }
@@ -302,7 +316,7 @@ ul.icons li {
     text-align: center;
 }
 
-@media (min-width: 850px) {
+@media (min-width: 700px) {
    .nav-links {
     display: flex;
     flex-direction: row;
@@ -315,6 +329,11 @@ ul.icons li {
    .container {
     grid-template-columns: 50px auto 400px auto 50px;
     grid-template-rows: 400px 400px 400px 400px;
+   }
+   
+   div img {
+    height: 500px;
+    width: auto;
    }
 
   .oregon, .seattle{
