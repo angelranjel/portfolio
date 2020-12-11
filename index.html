@@ -77,16 +77,23 @@
       <h3>Contact Me</h3>
       <p>Integer eu ante ornare amet commetus vestibulum blandit integer in curae ac faucibus integer non. Adipiscing cubilia elementum integer. Integer eu ante ornare amet commetus.</p>
     
-      <form action="#" method="post">
-        <label for="name"> Name
+      <form action="https://formspree.io/f/mpzoyjja" method="post">
+        <label for="name">Full Name
           <input id="name" name="name" placeholder="Name" type="text">
         </label>
-        <input id="email" name="email" placeholder="Email" type="email">
-
-        <input id="subject" name="subject" placeholder="Subject" type="text">
-
-        <textarea id="message" name="message" placeholder="Message" rows="6"></textarea>
-      
+        
+        <label for="email">Your Email
+          <input id="email" name="email" placeholder="Email" type="email">
+        </label>
+        
+        <label for="subject">Subject
+          <input id="subject" name="subject" placeholder="Subject" type="text">
+        </label>
+        
+        <label for="message">Type Message
+          <textarea id="message" name="message" placeholder="Message" rows="6"></textarea>
+        </label>
+        
         <ul class="actions">
           <li><input class="primary" type="submit" value="Send Message"></li>
           <li><input type="reset" value="Reset Form"></li>
