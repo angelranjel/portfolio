@@ -1,3 +1,11 @@
+@import 'global.css';     /* main elements body, h1, img */
+@import 'banner.css';
+@import 'form.css';
+@import 'nav.css';
+@import 'home-gallery.css';
+@import 'trip-gallery.css';   /* imagebox, etc */
+@import 'misc.css';           /* the rest */
+
 body {
     background-color: #ffffff;
     font-size: 18px;
