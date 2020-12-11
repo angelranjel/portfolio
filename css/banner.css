@@ -12,11 +12,28 @@ header.home {
 }
   
 header.oregon-trip{
-    height: 500px;
+    height: 400px;
     background-image: url("../images/oregon_pic10.jpg");
 }
   
 header.northwest-trip{
-    height: 500px;
+    height: 400px;
     background-image: url("../images/northwest_header.jpg"); 
+}
+
+@media (min-width: 700px){
+    header.home {
+        height: 600px;
+        background-image: url("../images/waterfall_header.jpg");
+    }
+
+    header.oregon-trip{
+        height: 600px;
+        background-image: url("../images/oregon_pic10.jpg");
+    }
+      
+    header.northwest-trip{
+        height: 600px;
+        background-image: url("../images/northwest_header.jpg"); 
+    }
 }
