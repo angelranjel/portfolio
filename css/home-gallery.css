@@ -1,0 +1,64 @@
+.oregon-image img,
+.northwest-image img,
+.seattle-image img {
+  height: 500px;
+  width: auto;
+}
+
+.oregon,
+.seattle,
+.northwest {
+  grid-column: 2 / span 1;
+}
+
+.oregon-image,
+.seattle-image,
+.northwest-image {
+  max-height: 700px;
+  grid-column: 1 / -1;
+  overflow: hidden;
+}
+
+.oregon,
+.oregon-image {
+  grid-row: 1 / auto;
+}
+
+.northwest,
+.northwest-image {
+  grid-row: 2 / auto;
+}
+
+.seattle,
+.seattle-image {
+  grid-row: 3 / auto;
+}
+
+.text-block {
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 5px solid black;
+  padding: 20px;
+  align-self: center;
+}
+
+
+@media (min-width: 700px) {
+  .oregon,
+  .seattle {
+    grid-column: 3 / span 2;
+  }
+
+  .oregon-image,
+  .seattle-image {
+    grid-column: 2 / span 2;
+  }
+
+  .northwest {
+    grid-column: 2 / span 1;
+  }
+
+  .northwest-image {
+    grid-column: 3 / span 2;
+    padding-left: 20px;
+  }
+}
