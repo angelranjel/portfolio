@@ -42,11 +42,21 @@ h2 a:hover {
   
 header h1 {
     margin: 0;
+    padding-top: 50px;
+    background-color:  rgba(0, 0, 0, 1);
 }
   
 footer {
     background-color: #f0ecec;
     border-top: 3px solid turquoise;
+}
+
+.align-center {
+    text-align: center;
+}
+  
+.inner {
+    padding: 1rem 2rem 1rem 2rem;
 }
   
 ul {

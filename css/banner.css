@@ -8,7 +8,7 @@ header {
   
 header.home {
     height: 400px;
-    background-image: url("../images/waterfall_header.jpg");
+    background-image: url("../images/landing_header.jpg");
 }
   
 header.oregon-trip{
@@ -21,10 +21,15 @@ header.northwest-trip{
     background-image: url("../images/northwest_header.jpg"); 
 }
 
+header.seattle-trip{
+    height: 400px;
+    background-image: url("../images/seattle_header.jpg"); 
+}
+
 @media (min-width: 700px){
     header.home {
         height: 600px;
-        background-image: url("../images/waterfall_header.jpg");
+        background-image: url("../images/landing_header.jpg");
     }
 
     header.oregon-trip{
@@ -35,5 +40,10 @@ header.northwest-trip{
     header.northwest-trip{
         height: 600px;
         background-image: url("../images/northwest_header.jpg"); 
+    }
+
+    header.seattle-trip{
+        height: 600px;
+        background-image: url("../images/seattle_header.jpg"); 
     }
 }
